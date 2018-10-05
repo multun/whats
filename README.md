@@ -60,6 +60,16 @@ int main() {
 
 you can iteratively define a structure member using a designator.
 
+```c
+int main() {
+    int n = 5;
+    printf("%zu\n", sizeof(int *[n++]));
+    printf("%d\n", n);
+}
+```
+
+sizeof can produce side effects.
+
 # C++ whats
 
 Thanksfully, C++ enables you to forward declare a templated sub templated class, later inheriting from its mother templated class.
