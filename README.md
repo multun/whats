@@ -19,17 +19,19 @@ struct $ {
     struct $ *$[0];
 } typedef $;
 
-a($ a[*], $ b[1][*]);
-a($ a[42], $ b[~-1][*]);
-a($ a[*], $ b[0][24]);
+a(long story, $ a[*], $ b[1][*]);
+a(long story, $ a[42], $ b[static ~-1][*]);
+a(long story, $ a[*], $ b[const 0][24]);
 
-a($ a[42], $ b[0][24]) {
+a(long story, $ a[42], $ b[restrict 0 * story + sizeof(a)][24]) {
     printf("%d\n", sizeof(a));
+    printf("%d\n", sizeof(b));
     printf("%d\n", sizeof(b[0]));
+    return b;
 }
 
 main() {
-    a(0, 0);
+    a(0, 0, 0);
 }
 ```
 
