@@ -42,6 +42,24 @@ main() {
 
 `int (*b);` declares a pointer to an int named b
 
+```c
+struct {
+    int a[3], b;
+} w[] = {
+    [0].a = {
+        [1] = 2
+    },
+    [0].a[0] = 1,
+};
+
+int main() {
+    printf("%d\n", w[0].a[0]);
+    printf("%d\n", w[0].a[1]);
+}
+```
+
+you can iteratively define a structure member using a designator.
+
 # C++ whats
 
 Thanksfully, C++ enables you to forward declare a templated sub templated class, later inheriting from its mother templated class.
