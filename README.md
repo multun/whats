@@ -1,4 +1,4 @@
-# Python wats
+# Python whats
 
 ```python
 >>> a = 1,
@@ -6,7 +6,7 @@
 (1,)
 ```
 
-# C wats
+# C whats
 
 `0xap-1` equals `5.0` (double), and is a single token
 
@@ -39,3 +39,33 @@ main() {
 
 
 `int (*b);` declares a pointer to an int named b
+
+# C++ whats
+
+Thanksfully, C++ enables you to forward declare a templated sub templated class, later inheriting from its mother templated class.
+
+```cpp
+#include <iostream>
+
+template<class T>
+struct A {
+    template<class U>
+    struct B;
+
+    static void lol() {
+        B<int>{}.print();
+    }
+};
+
+template<class T>
+template<class U>
+struct A<T>::B : A {
+    static void print() {
+        std::cout << "wtf" << std::endl;
+    }
+};
+
+int main() {
+    A<int>::lol();;
+}
+```
