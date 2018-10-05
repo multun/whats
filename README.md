@@ -70,6 +70,17 @@ int main() {
 
 sizeof can produce side effects.
 
+```c
+int main() {
+    int i = 42;
+    typedef int what[i];
+    what the_fuck;
+    printf("%zu\n", sizeof(the_fuck));
+}
+```
+
+typedef can contain VLAs. The size of the array should be computed at typedef time.
+
 # C++ whats
 
 Thanksfully, C++ enables you to forward declare a templated sub templated class, later inheriting from its mother templated class.
