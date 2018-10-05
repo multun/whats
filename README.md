@@ -8,7 +8,7 @@
 
 # C wats
 
-`0xap-1` equals `5f`, and is a single token
+`0xap-1` equals `5.0` (double), and is a single token
 
 `$` is a valid identifier
 
