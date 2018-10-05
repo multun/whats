@@ -36,3 +36,6 @@ main() {
  - compiles with `{gcc,clang} --std=c99`
  - changing array sizes in the definition of a keeps gcc happy but makes clang give up (gcc is wrong here)
  - prints `sizeof(void*)` and 0
+
+
+`int (*b);` declares a pointer to an int named b
