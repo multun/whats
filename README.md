@@ -10,9 +10,15 @@
 
 `0xap-1` equals `5.0` (double), and is a single token
 
+---
+
 `$` is a valid identifier
 
+---
+
 `void typedef oops;` is valid
+
+---
 
 ```c
 struct $ {
@@ -40,7 +46,11 @@ main() {
  - prints `sizeof(void*)` and 0
 
 
+---
+
 `int (*b);` declares a pointer to an int named b
+
+---
 
 ```c
 struct {
@@ -60,6 +70,8 @@ int main() {
 
 you can iteratively define a structure member using a designator.
 
+---
+
 ```c
 int main() {
     int n = 5;
@@ -69,6 +81,8 @@ int main() {
 ```
 
 sizeof can produce side effects.
+
+---
 
 ```c
 int main() {
@@ -80,6 +94,10 @@ int main() {
 ```
 
 typedef can contain VLAs. The size of the array should be computed at typedef time.
+
+---
+
+A single `#` on its own line is a nop
 
 # C++ whats
 
